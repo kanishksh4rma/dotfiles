@@ -178,6 +178,9 @@ if [ -f /etc/bashrc ]; then
 					# To see if a command is aliased, a file, or a built-in command
 					alias checkcommand="type -t"
 					
+					# encrypt files and make .7z
+					alias zip-encrypt="7z a -p -mx=9 -mhe -t7z "
+					
 					# Show current network connections to the server
 					alias ipview="netstat -anpl | grep :80 | awk {'print \$5'} | cut -d\":\" -f1 | sort | uniq -c | sort -n | sed -e 's/^ *//' -e 's/ *\$//'"
 					alias myip="echo $(ifconfig | grep broadcast | awk '{print $2}')"

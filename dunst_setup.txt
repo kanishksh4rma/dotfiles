@@ -1,0 +1,17 @@
+#dependencies
+sudo apt-get install libdbus-1-dev libx11-dev libxinerama-dev libxrandr-dev libxss-dev libglib2.0-dev libpango1.0-dev libgtk-3-dev libxdg-basedir-dev libnotify-dev
+
+#installation
+git clone https://github.com/dunst-project/dunst.git
+cd dunst
+make
+sudo make install
+
+#make it default
+sudo mv /usr/share/dbus-1/services/org.kde.plasma.Notifications.service ~/Desktop/
+echo "Going to reboot ..."
+sleep 5
+sudo reboot now
+
+
+
